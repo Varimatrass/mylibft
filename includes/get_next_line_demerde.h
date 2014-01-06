@@ -3,27 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aviala <aviala@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/15 23:02:21 by aviala            #+#    #+#             */
-/*   Updated: 2013/12/15 23:02:25 by aviala           ###   ########.fr       */
+/*   Created: 2013/12/03 13:13:10 by mde-jesu          #+#    #+#             */
+/*   Updated: 2013/12/08 21:33:24 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
+# include "libft.h"
+# include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# define BUFF_SIZE 21475
 
-# define BUFF_SIZE 4096
+int		get_next_line(int const fd, char **line);
 
-int					get_next_line(int const fd, char **line);
-
-typedef struct		s_read
-{
-	int				size;
-	int				index;
-	int				fd;
-	char			*read;
-	struct s_read	*next;
-}					t_read;
-
-#endif /* !GET_NEXT_LINE_H */
+#endif
