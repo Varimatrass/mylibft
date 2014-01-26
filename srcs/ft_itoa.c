@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:15:29 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/29 21:54:42 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/01/26 17:38:22 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 static int	ft_abs(int n);
 static char	*ft_putnbr_str(int n, char *s);
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	size_t	i;
-	int				n_cpy;
-	char			*s;
+	int		n_cpy;
+	char	*s;
 
 	i = 0;
 	n_cpy = n;
