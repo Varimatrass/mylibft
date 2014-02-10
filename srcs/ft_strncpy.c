@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 18:38:18 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/26 12:07:58 by matthias         ###   ########.fr       */
+/*   Updated: 2013/11/30 16:50:56 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 	}
 	while (i < n)
 		s1[i++] = '\0';
-	s1[i] = '\0';
 	return (s1);
 }
