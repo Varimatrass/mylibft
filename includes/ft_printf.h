@@ -6,15 +6,22 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/17 14:10:15 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/21 17:52:53 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/02/10 23:13:30 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF
 # define FT_PRINTF
 
-# include <string.h>
-# include <stdarg.h>
+# ifndef STRING_H
+#  define STRING_H
+#  include <string.h>
+# endif /* !STRING_H */
+
+# ifndef STDARG_H
+#  define STDARG_H
+#  include <stdarg.h>
+# endif /* !STDARG_H */
 
 /*
 ** ZEROPAD : pad with zero.

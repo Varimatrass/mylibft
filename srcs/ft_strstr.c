@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:02:57 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/29 21:56:45 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/02/10 23:24:29 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 #ifndef TEST_STR
 # define TEST_STR
-static char	ft_test_str(const char *s1, const char *s2, size_t i);
 
 static char	ft_test_str(const char *s1, const char *s2, size_t i)
 {
@@ -30,6 +29,7 @@ static char	ft_test_str(const char *s1, const char *s2, size_t i)
 	}
 	return (1);
 }
+
 #endif
 
 char		*ft_strstr(const char *s1, const char *s2)
