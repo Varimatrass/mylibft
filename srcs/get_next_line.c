@@ -6,7 +6,7 @@
 /*   By: aviala <aviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/15 23:02:04 by aviala            #+#    #+#             */
-/*   Updated: 2013/12/15 23:09:29 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/02/11 18:27:46 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "ft_string.h"
+#include "libft.h"
 #include "get_next_line.h"
 
 static t_read		*ft_freeread(t_read *red, t_read *prev, t_read **start)
