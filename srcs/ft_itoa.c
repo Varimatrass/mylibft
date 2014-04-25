@@ -6,11 +6,19 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:15:29 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/04/25 14:16:46 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/04/25 14:55:39 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_abs(int n)
+{
+	if (n >= 0)
+		return (n);
+	else
+		return (-n);
+}
 
 static char	*ft_putnbr_str(int n, char *s)
 {
@@ -21,14 +29,6 @@ static char	*ft_putnbr_str(int n, char *s)
 	*s++ = ft_abs(n % 10) + '0';
 	*s = '\0';
 	return (s);
-}
-
-static int	ft_abs(int n)
-{
-	if (n >= 0)
-		return (n);
-	else
-		return (-n);
 }
 
 char		*ft_itoa(int n)
