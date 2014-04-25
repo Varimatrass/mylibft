@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/19 15:02:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/02/19 15:03:23 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/04/25 14:24:54 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static t_read		*ft_newread(int fd)
 	return (red);
 }
 
-static int			ft_print(int n, t_read **tab, t_read **s, char** l)
+static int			ft_print(int n, t_read **tab, t_read **s, char **l)
 {
 	char			*tmpstr;
 	int				index;

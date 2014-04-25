@@ -6,14 +6,30 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:15:29 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/02/10 23:22:39 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2014/04/25 14:16:46 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_abs(int n);
-static char	*ft_putnbr_str(int n, char *s);
+static char	*ft_putnbr_str(int n, char *s)
+{
+	if (n / 10 != 0)
+		s = ft_putnbr_str((n / 10), s);
+	else if (n < 0)
+		*s++ = '-';
+	*s++ = ft_abs(n % 10) + '0';
+	*s = '\0';
+	return (s);
+}
+
+static int	ft_abs(int n)
+{
+	if (n >= 0)
+		return (n);
+	else
+		return (-n);
+}
 
 char		*ft_itoa(int n)
 {
@@ -36,23 +52,4 @@ char		*ft_itoa(int n)
 	s = ft_strnew(i);
 	ft_putnbr_str(n, s);
 	return (s);
-}
-
-static char	*ft_putnbr_str(int n, char *s)
-{
-	if (n / 10 != 0)
-		s = ft_putnbr_str((n / 10), s);
-	else if (n < 0)
-		*s++ = '-';
-	*s++ = ft_abs(n % 10) + '0';
-	*s = '\0';
-	return (s);
-}
-
-static int	ft_abs(int n)
-{
-	if (n >= 0)
-		return (n);
-	else
-		return (-n);
 }
