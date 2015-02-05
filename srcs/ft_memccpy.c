@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 22:56:07 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/01 15:11:23 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/05 09:58:19 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 	cc = (unsigned char)c;
 	if (s1 && s2 && n)
 	{
-		while (i < n && byte2[i])
+		while (i < n)
 		{
-			byte1[i] = byte2[i];
-			if (byte1[i] == cc)
-				return ((void *)&byte1[i + 1]);
+			if ((*byte1++ = *byte2++) == cc)
+				return (byte1);
 			i++;
 		}
 	}
