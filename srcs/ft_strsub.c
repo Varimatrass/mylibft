@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:13:02 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/11/30 16:13:41 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/05 15:37:49 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*copy;
 
 	i = 0;
-	if (!len)
+	if (!s)
 		return (NULL);
 	if ((copy = (char *)malloc((len + 1) * sizeof(char))) == NULL)
 		return (NULL);
