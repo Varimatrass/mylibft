@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 22:58:38 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/05 10:00:35 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 17:10:37 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*schar1;
 	unsigned char	*schar2;
 
