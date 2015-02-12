@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/17 14:09:32 by mde-jesu          #+#    #+#             */
-/*   Updated: 2013/12/21 17:18:23 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 17:17:50 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ size_t	ft_printf(const char *format, ...)
 	n = 0;
 	p = NULL;
 	va_start(ap, format);
-	p = (char *) format;
+	p = (char *)format;
 	while (p[n] != '\0')
 	{
 		if (p[n] != '%')
