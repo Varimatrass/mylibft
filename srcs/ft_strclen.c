@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dlancar <dlancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/19 15:03:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 17:54:40 by mde-jesu         ###   ########.fr       */
+/*   Created: 2013/11/28 09:31:47 by dlancar           #+#    #+#             */
+/*   Updated: 2013/11/28 09:36:12 by dlancar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "ft_get_next.h"
+/*
+** Return the length of the nul or c terminated string
+*/
 
-int					get_next_line(int const fd, char **line);
+size_t	ft_strclen(const char *s, char c)
+{
+	size_t	res;
 
-#endif
+	res = 0;
+	if (!s || !*s)
+		return (res);
+	while (*s && *s != c)
+	{
+		res++;
+		s++;
+	}
+	return (res);
+}

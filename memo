@@ -5,3 +5,6 @@ libft:
 	bonus++:
 			lstcpy
 			lstpush
+			ft_strclen
+			ft_strnjoinf
+			ft_malloc

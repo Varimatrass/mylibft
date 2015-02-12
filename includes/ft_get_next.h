@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_get_next.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dlancar <dlancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/19 15:03:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 17:54:40 by mde-jesu         ###   ########.fr       */
+/*   Created: 2014/05/09 13:05:49 by dlancar           #+#    #+#             */
+/*   Updated: 2015/02/12 17:54:23 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef FT_GET_NEXT_H
+# define FT_GET_NEXT_H
 
-# include "ft_get_next.h"
+# define BUFF_SIZE 4096
 
-int					get_next_line(int const fd, char **line);
+int				ft_get_next(const int fd, char **line, char c);
+
+typedef struct	s_entry
+{
+	struct s_entry	*next;
+	int				fd;
+	char			*buf;
+}				t_entry;
 
 #endif

@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2015/02/12 13:09:59 by mde-jesu         ###   ########.fr        #
+#    Updated: 2015/02/12 18:10:30 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -72,9 +72,13 @@ SRC_FT = ft_atoi.c \
 	ft_strsub.c \
 	ft_strtrim.c \
 	ft_tolower.c \
+	ft_strclen.c \
+	ft_strnjoinf.c \
+	ft_malloc.c \
 	ft_toupper.c
 
-SRC_GNL = get_next_line.c
+SRC_GNL = get_next_line.c \
+	ft_get_next.c
 
 SRC = $(SRC_FT) $(SRC_GNL)
 

@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dlancar <dlancar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/19 15:03:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 17:54:40 by mde-jesu         ###   ########.fr       */
+/*   Created: 2014/01/17 18:07:57 by dlancar           #+#    #+#             */
+/*   Updated: 2015/02/12 18:12:26 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
+#include <stdlib.h>
 
-# include "ft_get_next.h"
+void	*ft_malloc(size_t size)
+{
+	void	*ptr;
 
-int					get_next_line(int const fd, char **line);
-
-#endif
+	ptr = malloc(size);
+	if (!ptr)
+	{
+		return (NULL);
+	}
+	return (ptr);
+}
