@@ -1,0 +1,7 @@
+libft:
+	part1	OK
+	part2	OK
+	bonus	bug lstmpap
+	bonus++:
+			lstcpy
+			lstpush

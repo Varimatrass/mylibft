@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2014/02/11 18:30:32 by mde-jesu         ###   ########.fr        #
+#    Updated: 2015/02/12 13:09:59 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -20,6 +20,8 @@ SRC_FT = ft_atoi.c \
 	ft_isprint.c \
 	ft_itoa.c \
 	ft_lstadd.c \
+	ft_lstpush.c \
+	ft_lstcpy.c \
 	ft_lstdel.c \
 	ft_lstdelone.c \
 	ft_lstiter.c \

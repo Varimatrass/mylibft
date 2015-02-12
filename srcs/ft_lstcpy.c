@@ -1,70 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/02 04:30:37 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 13:07:46 by mde-jesu         ###   ########.fr       */
+/*   Created: 2015/02/12 11:28:01 by mde-jesu          #+#    #+#             */
+/*   Updated: 2015/02/12 11:44:31 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
 static void	del(void *d, size_t s)
 {
 	free(d);
 	(void)s;
 }
-*/
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstcpy(t_list *lst)
 {
-	t_list	*res;
-	t_list	*temp;
-
-	res = f(lst);
-	lst = lst->next;
-	while (lst)
-	{
-		temp = f(lst);
-		if (!temp)
-			return (NULL);
-		ft_lstpush(res, temp);
-		lst = lst->next;
-	}
-	return (res);
-
-	/*
 	t_list	*new;
+	t_list	*ret;
+	t_list	*tmp;
 
-	new = ft_lstcpy(lst);
-	ft_lstiter(new, f);
-	return (new);
-	*/
-
-	/*
-	t_list	*new;
-	t_list	*start;
-
-	if (!lst || !f)
+	if (!lst)
 		return (NULL);
-	lst = f(lst);
 	if (!(new = ft_lstnew(lst->content, lst->content_size)))
 		return (NULL);
-	start = new;
+	ret = new;
 	while (lst->next)
 	{
-		lst = f(lst->next);
-		if (!(new->next = ft_lstnew(lst->content, lst->content_size)))
+		lst = lst->next;
+		tmp = NULL;
+		if (!(tmp = ft_lstnew(lst->content, lst->content_size)))
 		{
-			ft_lstdel(&start, del);
+			ft_lstdel(&ret, del);
 			return (NULL);
 		}
+		new->next = tmp;
 		new = new->next;
 	}
-	return (start);
-	*/
+	return (ret);
 }
