@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/14 10:55:31 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/01/14 10:57:50 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 17:19:54 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,4 @@ typedef struct			s_circ_list
 	struct s_circ_list	*next;
 }						t_circ_list;
 
-#endif /* !CIRCULAR_H */
+#endif

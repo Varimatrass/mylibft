@@ -6,22 +6,15 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/17 14:10:15 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/02/10 23:13:30 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 17:20:50 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-# define FT_PRINTF
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# ifndef STRING_H
-#  define STRING_H
-#  include <string.h>
-# endif /* !STRING_H */
-
-# ifndef STDARG_H
-#  define STDARG_H
-#  include <stdarg.h>
-# endif /* !STDARG_H */
+# include <string.h>
+# include <stdarg.h>
 
 /*
 ** ZEROPAD : pad with zero.
@@ -44,4 +37,4 @@ size_t	ft_selector(char *p, va_list *ap, size_t *incr);
 size_t	ft_selector2(char *p, va_list *ap, size_t *n);
 size_t	ft_printf(const char *format, ...);
 
-#endif /*!FT_PRINTF*/
+#endif

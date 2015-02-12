@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/19 15:03:48 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/02/19 15:03:49 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 17:21:18 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ typedef struct		s_read
 	struct s_read	*next;
 }					t_read;
 
-#endif /* !GET_NEXT_LINE_H */
+#endif
