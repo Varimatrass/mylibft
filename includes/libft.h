@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 18:10:58 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/12 18:30:07 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,8 @@ t_list				*ft_lstpush(t_list *list, t_list *new);
 t_list				*ft_lstcpy(t_list *lst);
 
 size_t				ft_strclen(const char *s, char c);
-char				*ft_strnjoinf(char *s1, char *s2, size_t n, unsigned int flag);
+char				*ft_strnjoinf(char *s1, char *s2,
+						size_t n, unsigned int flag);
 void				*ft_malloc(size_t size);
 
 #endif
