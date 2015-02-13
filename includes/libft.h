@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/13 09:47:25 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/13 09:56:07 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+/*
+** first part
+*/
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *s1, const void *s2, size_t n);
@@ -53,6 +56,9 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
+/*
+** seconde part (!put)
+*/
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -70,10 +76,25 @@ char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 
+/*
+** seconde part (put)
+*/
 size_t				ft_putchar(char c);
 size_t				ft_putstr(char const *s);
 size_t				ft_putendl(char const *s);
 size_t				ft_putnbr(int n);
+
+/*
+** seconde part (put_fd)
+*/
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char const *s, int fd);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
+
+/*
+** put bonus
+*/
 size_t				ft_putunbr(unsigned int n);
 size_t				ft_putlong(long l);
 size_t				ft_putoct(unsigned int n);
@@ -81,20 +102,25 @@ size_t				ft_puthexa(unsigned int n);
 size_t				ft_puthexa_maj(unsigned int n);
 size_t				ft_putptr(unsigned long n);
 
-void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char const *s, int fd);
-void				ft_putendl_fd(char const *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
-
+/*
+** lst base bonus
+*/
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** lst bonus++
+*/
 t_list				*ft_lstpush(t_list *list, t_list *new);
 t_list				*ft_lstcpy(t_list *lst);
 
+/*
+** other bonus
+*/
 size_t				ft_strclen(const char *s, char c);
 char				*ft_strnjoinf(char *s1, char *s2,
 						size_t n, unsigned int flag);
