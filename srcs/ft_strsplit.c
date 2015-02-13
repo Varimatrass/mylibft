@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:14:55 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/13 09:37:09 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/13 09:45:23 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,6 @@ static int	ft_how_many(const char *s, char c)
 	return (j);
 }
 
-static int	ft_mod_strlen(const char *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != c && s[i] != 0)
-		i++;
-	return (i);
-}
-
 char		**ft_strsplit(char const *s, char c)
 {
 	size_t	i;
@@ -61,8 +51,8 @@ char		**ft_strsplit(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			tab[j++] = ft_strsub(s, i, ft_mod_strlen(&s[i], c));
-			i += ft_mod_strlen(&s[i], c) - 1;
+			tab[j++] = ft_strsub(s, i, ft_strnlen(&s[i], c));
+			i += ft_strnlen(&s[i], c) - 1;
 		}
 		i++;
 	}

@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2015/02/13 09:39:59 by mde-jesu         ###   ########.fr        #
+#    Updated: 2015/02/13 09:44:23 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -79,6 +79,7 @@ SRC_FT = ft_atoi.c \
 	ft_putoct.c \
 	ft_putptr.c \
 	ft_putunbr.c \
+	ft_strnlen.c \
 	ft_toupper.c
 
 SRC_GNL = get_next_line.c \

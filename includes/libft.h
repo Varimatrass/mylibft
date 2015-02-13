@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/12 18:30:07 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/13 09:47:25 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ size_t				ft_strclen(const char *s, char c);
 char				*ft_strnjoinf(char *s1, char *s2,
 						size_t n, unsigned int flag);
 void				*ft_malloc(size_t size);
+int					ft_strnlen(const char *s, char c);
 
 #endif
