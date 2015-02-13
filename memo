@@ -8,3 +8,64 @@ libft:
 			ft_strclen
 			ft_strnjoinf
 			ft_malloc
+
+	ft_array.c \
+	ft_array_2.c \
+	ft_array_3.c \
+	ft_config.c \
+	ft_double.c \
+	ft_error.c \
+	ft_get_size.c \
+	ft_isspace.c \
+	ft_math.c \
+	ft_printf.c \
+	ft_printf_fd.c \
+	ft_putdouble.c \
+	ft_putdouble_fd.c \
+	ft_putfstr.c \
+	ft_putint_base.c \
+	ft_snprintf.c \
+	ft_strchar.c \
+	ft_strcharstr.c \
+	ft_strjoinf.c \
+	ft_strndup.c \
+	ft_strnjoin.c \
+	ft_strsplitstr.c \
+	ft_vec2d.c \
+	ft_vec3.c \
+	ft_vec3d.c \
+	ft_vprintf.c \
+	ft_vprintf_fd.c \
+
+!ft_math_cst.c \
+!ft_trigo.c \
+#	../includes/error.h
+#	../includes/ft_array.h
+#	../includes/ft_math.h
+#	ft_array.c
+#	ft_array_2.c
+#	ft_array_3.c
+#	ft_config.c
+#	ft_double.c
+#	ft_error.c
+#	ft_get_size.c
+#	ft_isspace.c
+#	ft_math.c
+#	ft_printf.c
+#	ft_printf_fd.c
+#	ft_putdouble.c
+#	ft_putdouble_fd.c
+#	ft_putfstr.c
+#	ft_putint_base.c
+#	ft_snprintf.c
+#	ft_strchar.c
+#	ft_strcharstr.c
+#	ft_strjoinf.c
+#	ft_strndup.c
+#	ft_strnjoin.c
+#	ft_strsplitstr.c
+#	ft_vec2d.c
+#	ft_vec3.c
+#	ft_vec3d.c
+#	ft_vprintf.c
+#	ft_vprintf_fd.c
