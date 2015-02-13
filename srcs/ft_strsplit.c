@@ -6,7 +6,7 @@
 /*   By: mde-jesu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/24 23:14:55 by mde-jesu          #+#    #+#             */
-/*   Updated: 2014/04/25 14:24:03 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/02/13 09:37:09 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_how_many(const char *s, char c)
 	return (j);
 }
 
-int			ft_mod_strlen(const char *s, char c)
+static int	ft_mod_strlen(const char *s, char c)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2015/02/12 18:10:30 by mde-jesu         ###   ########.fr        #
+#    Updated: 2015/02/13 09:39:59 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -37,7 +37,6 @@ SRC_FT = ft_atoi.c \
 	ft_memset.c \
 	ft_putchar.c \
 	ft_putchar_fd.c \
-	ft_putdiv.c \
 	ft_putendl.c \
 	ft_putendl_fd.c \
 	ft_putlong.c \
@@ -75,6 +74,11 @@ SRC_FT = ft_atoi.c \
 	ft_strclen.c \
 	ft_strnjoinf.c \
 	ft_malloc.c \
+	ft_puthexa.c \
+	ft_puthexa_maj.c \
+	ft_putoct.c \
+	ft_putptr.c \
+	ft_putunbr.c \
 	ft_toupper.c
 
 SRC_GNL = get_next_line.c \
