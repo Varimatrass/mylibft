@@ -7,7 +7,7 @@ libft:
 			lstpush
 			ft_strclen
 			ft_strnjoinf
-			ft_malloc
+			ft_malloc /!\
 
 	ft_array.c \
 	ft_array_2.c \
@@ -39,9 +39,10 @@ libft:
 
 !ft_math_cst.c \
 !ft_trigo.c \
-#	../includes/error.h
-#	../includes/ft_array.h
-#	../includes/ft_math.h
+
+#	../includes/error.h			OK
+#	../includes/ft_array.h		OK
+#	../includes/ft_math.h		OK
 #	ft_array.c
 #	ft_array_2.c
 #	ft_array_3.c
@@ -57,7 +58,7 @@ libft:
 #	ft_putdouble_fd.c
 #	ft_putfstr.c
 #	ft_putint_base.c
-#	ft_snprintf.c
+!ft_snprintf.c
 #	ft_strchar.c
 #	ft_strcharstr.c
 #	ft_strjoinf.c

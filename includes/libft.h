@@ -16,6 +16,35 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
+
+# ifndef NULL
+#  define NULL ((void *)0)
+# endif
+
+# ifndef STDIN
+#  define STDIN  0
+# endif
+# ifndef STDOOUT
+#  define STDOUT 1
+# endif
+# ifndef STDERR
+#  define STDERR 2
+# endif
+
+# define TRUE  1
+# define FALSE 0
+
+# define NAF   3
+
+# define PTR  2
+# define LOOP 4
+
+# define LOAD_FACTOR 0.75
+
+typedef unsigned char	t_bool;
+typedef unsigned int	t_flags;
+typedef unsigned int	t_uint;
 
 typedef struct		s_list
 {
@@ -119,12 +148,57 @@ t_list				*ft_lstpush(t_list *list, t_list *new);
 t_list				*ft_lstcpy(t_list *lst);
 
 /*
-** other bonus
+** -------------------------- other bonus -----------------------------------
+** for manipulate str
 */
+int					ft_strnlen(const char *s, char c);
 size_t				ft_strclen(const char *s, char c);
+char				*ft_strchar(const char *s1, const char *s2);
+char				*ft_strcharstr(const char *s1, const char *s2);
+char				*ft_strjoinf(char *s1, char *s2, t_flags flag);
 char				*ft_strnjoinf(char *s1, char *s2,
 						size_t n, unsigned int flag);
+char				*ft_strnjoin(const char *s1, const char *s2, size_t n);
+char				*ft_strndup(const char *s, size_t n);
+t_array				*ft_strsplitstr(const char *s, const char *s1);
+
+/*
+** for use malloc simplie
+*/
 void				*ft_malloc(size_t size);
-int					ft_strnlen(const char *s, char c);
+
+/*
+** for test char
+*/
+int					ft_isspace(int c);
+
+/*
+** for test number
+*/
+size_t				ft_get_size(int n);
+
+/*
+** for put all things
+*/
+int					ft_putuint_base(unsigned int n, unsigned int base);
+int					ft_putuint_base_l(unsigned int n, unsigned int base);
+void				ft_putfstr(const char *s1, const void *arg);
+void				ft_putdouble(double d);
+void				ft_putdouble_fd(double d, int fd);
+void				ft_printf(const char *s, ...);
+void				ft_printf_fd(int fd, const char *s, ...);
+void				ft_vprintf(const char *s, va_list ap);
+void				ft_vprintf_fd(int fd, const char *s, va_list ap);
+
+/*
+** get_next as get_next_line but choose char limiter
+*/
+int					ft_get_next(const int fd, char **line, char c);
+
+/*
+** get things for sh
+*/
+char				*get_env(const char *name);
+char				*get_path(int index);
 
 #endif

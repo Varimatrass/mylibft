@@ -63,4 +63,3 @@ t_bool			vec3_cmp(const t_vec3 *vec1, const t_vec3 *vec2);
 t_bool			vec3d_cmp(const t_vec3d *vec1, const t_vec3d *vec2);
 
 #endif
-

@@ -29,4 +29,3 @@ int			ft_error_msg(const char *msg, ...);
 int			ft_perror(void);
 
 #endif
-

@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "error.h"
 #include "libft.h"
 #include <stdlib.h>
 
@@ -20,6 +21,7 @@ void	*ft_malloc(size_t size)
 	ptr = malloc(size);
 	if (!ptr)
 	{
+		ft_error();
 		return (NULL);
 	}
 	return (ptr);
