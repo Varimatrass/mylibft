@@ -117,7 +117,7 @@ SRCDIR = ./srcs
 OBJDIR = ./objs
 INCDIR = -I./includes
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -ansi -pedantic -pedantic-errors
 
 ifeq ($(W),)
 	CC = gcc
