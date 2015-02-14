@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_array.h"
 
 char	*get_env(const char *name)
 {
@@ -34,7 +35,7 @@ char	*get_path(int index)
 	static t_array	*path = NULL;
 
 	if (!path)
-		path = ft_strsplit(get_env("PATH"), ':');
+		path = (t_array*)ft_strsplit(get_env("PATH"), ':');
 	if (index < 0)
 	{
 		array_free(&path);

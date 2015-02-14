@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_array.h"
 
 static void	ft_put_base(unsigned int n, unsigned int base, t_bool upper)
 {

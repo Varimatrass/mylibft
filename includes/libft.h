@@ -160,7 +160,6 @@ char				*ft_strnjoinf(char *s1, char *s2,
 						size_t n, unsigned int flag);
 char				*ft_strnjoin(const char *s1, const char *s2, size_t n);
 char				*ft_strndup(const char *s, size_t n);
-t_array				*ft_strsplitstr(const char *s, const char *s1);
 
 /*
 ** for use malloc simplie

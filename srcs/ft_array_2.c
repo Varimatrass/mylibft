@@ -12,6 +12,7 @@
 
 #include "error.h"
 #include "libft.h"
+#include "ft_array.h"
 
 t_array	*array_set(t_array *arr, void *value, unsigned int index)
 {

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_array.h"
 #include <stdlib.h>
 
 t_array		*array_clear(t_array *arr, t_bool b)

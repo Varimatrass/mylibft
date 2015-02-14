@@ -48,4 +48,6 @@ void			array_free(t_array **arr);
 # define A_C(arr, index)  (*(char *)A_G(arr, index))
 # define A_S(arr, index)  (*(char **)A_G(arr, index))
 
+t_array				*ft_strsplitstr(const char *s, const char *s1);
+
 #endif

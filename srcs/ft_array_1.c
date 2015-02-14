@@ -12,6 +12,7 @@
 
 #include "error.h"
 #include "libft.h"
+#include "ft_array.h"
 #include <stdlib.h>
 
 t_array	*array_new(size_t capacity, size_t size_change, size_t size_type,
