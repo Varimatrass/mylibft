@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/13 18:03:19 by mde-jesu          #+#    #+#             */
-/*   Updated: 2015/02/13 18:03:20 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2015/03/03 12:43:17 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,6 @@ double			ft_sqrt_d(t_uint n);
 
 double			ft_trunc(double d, t_uint p);
 int				ft_round(double d);
-
-//double			ft_sin(double d);
-//double			ft_cos(double d);
-//double			ft_tan(double d);
 
 void			set_vec2d(t_vec2d *vec, double x, double y);
 void			set_vec3(t_vec3 *vec, int x, int y, int z);
