@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2015/02/13 09:44:23 by mde-jesu         ###   ########.fr        #
+#    Updated: 2015/03/05 15:41:55 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -117,7 +117,7 @@ SRCDIR = ./srcs
 OBJDIR = ./objs
 INCDIR = -I./includes
 
-CFLAGS = -Wall -Werror -Wextra -ansi -pedantic -pedantic-errors
+CFLAGS = -Wall -Werror -Wextra
 
 ifeq ($(W),)
 	CC = gcc
