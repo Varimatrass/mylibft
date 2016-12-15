@@ -1,0 +1,16 @@
+#add un subtree dans repo
+git remote add -f name/origin https://adresse.com
+git subtree add --prefix=name name/origin branche
+
+#push and pull le subtree depuis le repo
+git subtree pull --squash --prefix name name/origin branche
+git subtree push --prefix name name/origin branch
+
+
+
+#exemple libft
+git remote add -f libft/origin https://github.com/Varimatrass/mylibft.git
+git subtree add --prefix=libft libft/origin master
+
+git subtree pull --squash --prefix libft libft/origin master
+git subtree push --prefix libft libft/origin master
