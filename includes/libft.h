@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/02/24 21:04:50 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/02/24 22:17:19 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,9 @@ typedef unsigned char	t_bool;
 typedef unsigned int	t_flags;
 typedef unsigned int	t_uint;
 
+/*
+** basic list struct
+*/
 typedef struct		s_list
 {
 	void			*content;
@@ -65,6 +68,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+/*
+** cyclic double way list struct
+*/
 typedef struct		s_cdlst
 {
 	void			*content;
@@ -72,6 +78,26 @@ typedef struct		s_cdlst
 	struct s_lst	*next;
 	struct s_lst	*prev;
 }					t_cdlst;
+
+/*
+** AVL node struct
+*/
+typedef struct		s_avln
+{
+	void			*content;
+	size_t			content_size;
+	struct s_avln	*par;
+	struct s_avln	*right;
+	struct s_avln	*left;
+}					t_avln;
+
+/*
+** AVL tree struct
+*/
+typedef struct		s_avlt
+{
+	t_avln			*root;
+}					t_avlt;
 
 /*
 ** MATH.H
@@ -133,7 +159,7 @@ int					ft_isprint(int c);
 int					ft_isspace(int c);
 
 /*
-** list function
+** list functions
 */
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
@@ -145,20 +171,25 @@ t_list				*ft_lstpush(t_list *list, t_list *new);
 t_list				*ft_lstcpy(t_list *lst);
 
 /*
-** double way circular list function
+** double way circular list functions
 */
 t_cdlst				*ft_cdlstnew(void const *content, size_t content_size);
 void				ft_cdlstadd(t_cdlst **l, t_cdlst *new);
 void				ft_cdlstdelone(t_cdlst **alst, void (*del)(void *, size_t));
 
 /*
-** double way circular list function
+** double way circular list functions
 ** todo
 */
 t_list				*ft_cdlstcpy(t_list *lst);
 void				ft_cdlstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_cdlstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_cdlstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** AVL tree functions
+*/
+t_avlt				*ft_avlnewtree(void);
 
 /*
 ** For manipulate pointers
