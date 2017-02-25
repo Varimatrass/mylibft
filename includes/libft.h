@@ -89,6 +89,7 @@ typedef struct		s_avln
 	struct s_avln	*par;
 	struct s_avln	*right;
 	struct s_avln	*left;
+	int				height;
 }					t_avln;
 
 /*
@@ -97,6 +98,7 @@ typedef struct		s_avln
 typedef struct		s_avlt
 {
 	t_avln			*root;
+	int				*compfunc(t_avln *, t_avln *);
 }					t_avlt;
 
 /*
@@ -132,6 +134,7 @@ typedef struct		s_vec2d
 }					t_vec2d;
 
 int					ft_pow(int a, unsigned int n);
+int					ft_intmax(int a, int b);
 t_uint				ft_sqrt(t_uint n);
 double				ft_sqrt_d(t_uint n);
 
@@ -189,7 +192,11 @@ t_list				*ft_cdlstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** AVL tree functions
 */
-t_avlt				*ft_avlnewtree(void);
+t_avlt				*ft_avlnewtree(int (*compfunc)(t_avln *, t_avln *));
+t_avln				*ft_avlnewnode(void const *content, size_t content_size);
+t_avln				*ft_avlrightrot(t_avln *x);
+t_avln				*ft_avlleftrot(t_avln *x);
+t_avln				*ft_avlinsert(t_avlt *tree, t_avln *new);
 
 /*
 ** For manipulate pointers

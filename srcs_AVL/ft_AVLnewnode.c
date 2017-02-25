@@ -36,6 +36,7 @@ t_avln	*ft_avlnewnode(void const *content, size_t content_size)
 		node->par = NULL;
 		node->right = NULL;
 		node->left = NULL;
+		node->height = 1;
 	}
 	return (node);
 }
