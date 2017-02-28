@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2016/01/29 11:02:28 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/02/28 16:06:35 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -123,6 +123,13 @@ SRC_STR =		ft_strcat.c \
 				ft_strsub.c \
 				ft_strtrim.c
 
+DIR_CDLST = srcs_cdlst
+SRC_CDLST =		ft_cdlstadd.c \
+				ft_cdlstaddp.c \
+				ft_cdlstnew.c \
+				ft_cdlstdelone.c
+
+
 SRC_LFT_COMP =	$(addprefix $(DIR_IS)/, $(SRC_IS)) \
 				$(addprefix $(DIR_LST)/, $(SRC_LST)) \
 				$(addprefix $(DIR_MATH)/, $(SRC_MATH)) \
@@ -130,7 +137,8 @@ SRC_LFT_COMP =	$(addprefix $(DIR_IS)/, $(SRC_IS)) \
 				$(addprefix $(DIR_OTHER)/, $(SRC_OTHER)) \
 				$(addprefix $(DIR_PRINTF)/, $(SRC_PRINTF)) \
 				$(addprefix $(DIR_PUT)/, $(SRC_PUT)) \
-				$(addprefix $(DIR_STR)/, $(SRC_STR))
+				$(addprefix $(DIR_STR)/, $(SRC_STR)) \
+				$(addprefix $(DIR_CDLST)/, $(SRC_CDLST))
 
 DIR_GNL = srcs_gnl
 SRC_GNL =		get_next_line.c \
@@ -138,7 +146,7 @@ SRC_GNL =		get_next_line.c \
 
 SRC_GNL_COMP =	$(addprefix $(DIR_GNL)/, $(SRC_GNL))
 
-SRCS = $(SRC_IS) $(SRC_LST) $(SRC_MATH) $(SRC_MEM) $(SRC_OTHER) $(SRC_PRINTF) $(SRC_PUT) $(SRC_STR) $(SRC_GNL)
+SRCS = $(SRC_IS) $(SRC_LST) $(SRC_MATH) $(SRC_MEM) $(SRC_OTHER) $(SRC_PRINTF) $(SRC_PUT) $(SRC_STR) $(SRC_CDLST) $(SRC_GNL)
 SRCS_COMP = $(SRC_LFT_COMP) $(SRC_GNL_COMP)
 
 OBJDIR = ./objs
@@ -190,6 +198,10 @@ $(OBJDIR)/%.o: $(DIR_PUT)/%.c
 
 $(OBJDIR)/%.o: $(DIR_STR)/%.c
 	@echo "[STR] $< TO $@"
+	@$(CC) -o $@ -c $< $(CFLAGS) $(INCDIR)
+
+$(OBJDIR)/%.o: $(DIR_CDLST)/%.c
+	@echo "[CDLST] $< TO $@"
 	@$(CC) -o $@ -c $< $(CFLAGS) $(INCDIR)
 
 $(OBJDIR)/%.o: $(DIR_GNL)/%.c

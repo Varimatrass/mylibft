@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/02/24 22:17:19 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/02/28 16:40:31 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,8 @@ typedef struct		s_cdlst
 {
 	void			*content;
 	size_t			content_size;
-	struct s_lst	*next;
-	struct s_lst	*prev;
+	struct s_cdlst	*next;
+	struct s_cdlst	*prev;
 }					t_cdlst;
 
 /*
@@ -175,21 +175,22 @@ t_list				*ft_lstcpy(t_list *lst);
 */
 t_cdlst				*ft_cdlstnew(void const *content, size_t content_size);
 void				ft_cdlstadd(t_cdlst **l, t_cdlst *new);
+void				ft_cdlstaddp(t_cdlst **alst, t_cdlst *new);
 void				ft_cdlstdelone(t_cdlst **alst, void (*del)(void *, size_t));
 
 /*
 ** double way circular list functions
 ** todo
 */
-t_list				*ft_cdlstcpy(t_list *lst);
-void				ft_cdlstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_cdlstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_cdlstmap(t_list *lst, t_list *(*f)(t_list *elem));
+//t_list				*ft_cdlstcpy(t_list *lst);
+//void				ft_cdlstdel(t_list **alst, void (*del)(void *, size_t));
+//void				ft_cdlstiter(t_list *lst, void (*f)(t_list *elem));
+//t_list				*ft_cdlstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
 ** AVL tree functions
 */
-t_avlt				*ft_avlnewtree(void);
+//t_avlt				*ft_avlnewtree(void);
 
 /*
 ** For manipulate pointers

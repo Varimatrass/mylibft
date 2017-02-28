@@ -6,13 +6,13 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/24 20:08:46 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/02/24 20:49:21 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/02/28 16:42:44 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_cdlstadd(t_cdlst **l, t_cdlst *new)
+void	ft_cdlstadd(t_cdlst **alst, t_cdlst *new)
 {
 	new->next = *alst;
 	if (*alst->prev != NULL)
