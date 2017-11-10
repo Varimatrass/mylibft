@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/24 20:08:46 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/02/28 16:42:44 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/03/02 16:49:55 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void	ft_cdlstadd(t_cdlst **alst, t_cdlst *new)
 {
+	t_cdlst	*l;
+
+	l = *alst;
 	new->next = *alst;
-	if (*alst->prev != NULL)
+	if (l->prev != NULL)
 	{
-		new->prev = *alst->prev;
-		*alst->prev->next = new;
+		new->prev = l->prev;
+		l->prev->next = new;
 	}
 	else
 	{
 		new->prev = *alst;
-		*alst->next = new
+		l->next = new;
 	}
-	*alst->prev = new;
+	l->prev = new;
 }

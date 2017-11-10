@@ -6,7 +6,7 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/02/28 16:50:49 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/03/02 16:51:20 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ typedef struct		s_avln
 typedef struct		s_avlt
 {
 	t_avln			*root;
-	int				*compfunc(t_avln *, t_avln *);
+	//int				*compfunc(t_avln *, t_avln *);
 }					t_avlt;
 
 /*
@@ -178,7 +178,7 @@ t_list				*ft_lstcpy(t_list *lst);
 */
 t_cdlst				*ft_cdlstnew(void const *content, size_t content_size);
 void				ft_cdlstadd(t_cdlst **l, t_cdlst *new);
-void				ft_cdlstaddp(t_cdlst **alst, t_cdlst *new);
+//void				ft_cdlstaddp(t_cdlst **alst, t_cdlst *new);
 void				ft_cdlstdelone(t_cdlst **alst, void (*del)(void *, size_t));
 
 /*

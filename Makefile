@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/02/28 16:06:35 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/03/02 16:51:32 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -125,7 +125,6 @@ SRC_STR =		ft_strcat.c \
 
 DIR_CDLST = srcs_cdlst
 SRC_CDLST =		ft_cdlstadd.c \
-				ft_cdlstaddp.c \
 				ft_cdlstnew.c \
 				ft_cdlstdelone.c
 
