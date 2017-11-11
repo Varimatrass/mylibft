@@ -6,16 +6,21 @@
 /*   By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:58:43 by mde-jesu          #+#    #+#             */
-/*   Updated: 2017/03/02 16:51:20 by mde-jesu         ###   ########.fr       */
+/*   Updated: 2017/11/11 17:49:49 by mde-jesu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+//# include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdint.h>
+
+/*
+** printf include
+*/
 # include <stdarg.h>
 
 # ifndef NULL
@@ -59,7 +64,7 @@ typedef unsigned int	t_flags;
 typedef unsigned int	t_uint;
 
 /*
-** basic list struct
+** BASIC LIST STRUCT
 */
 typedef struct		s_list
 {
@@ -69,7 +74,7 @@ typedef struct		s_list
 }					t_list;
 
 /*
-** cyclic double way list struct
+** CYCLIC DOUBLE WAY LIST STRUCT
 */
 typedef struct		s_cdlst
 {
@@ -80,7 +85,7 @@ typedef struct		s_cdlst
 }					t_cdlst;
 
 /*
-** AVL node struct
+** AVL NODE STRUCT
 */
 typedef struct		s_avln
 {
@@ -93,13 +98,39 @@ typedef struct		s_avln
 }					t_avln;
 
 /*
-** AVL tree struct
+** AVL TREE STRUCT
 */
 typedef struct		s_avlt
 {
 	t_avln			*root;
 	//int				*compfunc(t_avln *, t_avln *);
 }					t_avlt;
+
+/*
+** READ BUFFER STRUCT
+** b_start and b_end are respectively start and end of the memory allocated
+** head and tail are respectively write pointer and read pointer
+** used is also number of data in read buffer
+*/
+typedef struct		s_rb
+{
+	uint8_t			*b_start;
+	uint8_t			*b_end;
+	size_t			capacity;
+	size_t			datasize;
+	size_t			used;
+	uint8_t			*head;
+	uint8_t			*tail;
+}					t_rb;
+
+/*
+** RB.H
+*/
+int	ft_rb_new(t_rb *newrb, size_t const capacity, size_t const datasize);
+/*
+** !RB.H
+*/
+
 
 /*
 ** MATH.H
