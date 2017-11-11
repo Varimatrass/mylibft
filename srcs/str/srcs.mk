@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:43:24 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:26:37 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:52:12 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,6 @@ STR :=			ft_strcat.c \
 
 OBJ := $(OBJ) $(STR:.c=.o)
 
-$(DIROBJ)/%.o: $(DIR_SRCS)/str/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/str/%.c $(INC)
 	@echo "[STR] $< TO $@"
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCDIR)

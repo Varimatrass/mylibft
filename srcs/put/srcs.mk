@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:43:24 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:25:29 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:52:03 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,6 @@ PUT :=			ft_putchar.c \
 
 OBJ := $(OBJ) $(PUT:.c=.o)
 
-$(DIROBJ)/%.o: $(DIR_SRCS)/put/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/put/%.c $(INC)
 	@echo "[PUT] $< TO $@"
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCDIR)

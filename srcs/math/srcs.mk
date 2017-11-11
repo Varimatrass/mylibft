@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:43:24 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:21:29 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:49:52 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,6 @@ MATH :=			ft_pow.c \
 
 OBJ := $(OBJ) $(MATH:.c=.o)
 
-$(DIROBJ)/%.o: $(DIR_SRCS)/math/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/math/%.c $(INC)
 	@echo "[MATH] $< TO $@"
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCDIR)

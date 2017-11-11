@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 19:12:52 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:18:29 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:43:44 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,6 @@ LST :=		ft_lstadd.c \
 
 OBJ := $(OBJ) $(LST:.c=.o)
 
-$(OBJDIR)/%.o: $(DIR_SRCS)/lst/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/lst/%.c $(INC)
 	@echo "[LST] $< TO $@"
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCDIR)

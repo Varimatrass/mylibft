@@ -6,7 +6,7 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:43:24 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:22:42 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:51:53 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,6 @@ MEM :=			ft_bzero.c \
 
 OBJ := $(OBJ) $(MEM:.c=.o)
 
-$(DIROBJ)/%.o: $(DIR_SRCS)/mem/%.c $(INC)
+$(OBJDIR)/%.o: $(SRCDIR)/mem/%.c $(INC)
 	@echo "[MEM] $< TO $@"
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INCDIR)

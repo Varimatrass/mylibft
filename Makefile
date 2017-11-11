@@ -6,57 +6,45 @@
 #    By: mde-jesu <mde-jesu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/12/21 18:01:32 by mde-jesu          #+#    #+#              #
-#    Updated: 2017/11/10 19:28:00 by mde-jesu         ###   ########.fr        #
+#    Updated: 2017/11/11 15:51:07 by mde-jesu         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
 
-DIR_SRCS = srcs
-
-DIR_CDLST = srcs_cdlst
-
-SRC_LFT_COMP =	$(addprefix $(DIR_IS)/, $(SRC_IS)) \
-				$(addprefix $(DIR_LST)/, $(SRC_LST)) \
-				$(addprefix $(DIR_MATH)/, $(SRC_MATH)) \
-				$(addprefix $(DIR_MEM)/, $(SRC_MEM)) \
-				$(addprefix $(DIR_OTHER)/, $(SRC_OTHER)) \
-				$(addprefix $(DIR_PRINTF)/, $(SRC_PRINTF)) \
-				$(addprefix $(DIR_PUT)/, $(SRC_PUT)) \
-				$(addprefix $(DIR_STR)/, $(SRC_STR)) \
-				$(addprefix $(DIR_CDLST)/, $(SRC_CDLST))
-
-DIR_GNL = srcs_gnl
-SRC_GNL =		get_next_line.c \
-				ft_get_next.c
-
-SRC_GNL_COMP =	$(addprefix $(DIR_GNL)/, $(SRC_GNL))
-
-SRCS = $(SRC_IS) $(SRC_LST) $(SRC_MATH) $(SRC_MEM) $(SRC_OTHER) $(SRC_PRINTF) $(SRC_PUT) $(SRC_STR) $(SRC_CDLST) $(SRC_GNL)
-SRCS_COMP = $(SRC_LFT_COMP) $(SRC_GNL_COMP)
-
-OBJDIR = ./objs
+# DIRECTORIES
+SRCDIR = srcs
+OBJDIR = objs
 INCDIR = -I./includes
 
+# FLAGES
 CFLAGS = -Wall -Werror -Wextra -pedantic -O3
 
-OBJS = $(SRCS:.c=.o)
-OBJS_PREF = $(addprefix $(OBJDIR)/, $(OBJS))
+# INCLUDES SOURCES
+include $(SRCDIR)/srcs.mk
 
-all: $(OBJDIR) $(NAME)
-	@echo "MAKE"
+# FILES PATH
+OBJPATH := $(addprefix $(OBJDIR)/, $(OBJ))
+INC := $(INCDIR)/libft.h
+
+# RULES
+
+all: $(NAME)
+	@echo "ALL"
+
+$(NAME): $(OBJPATH)
+	ar -crus $@ $^
+	ranlib $(NAME)
+
+$(OBJPATH): |$(OBJDIR)
 
 $(OBJDIR):
 	@echo "MKDIR"
 	mkdir $(OBJDIR)
 
-$(NAME): $(OBJS_PREF)
-	@echo "NAME"
-	@ar rcs $@ $^
-
 clean:
 	@echo "CLEAN"
-	@rm -f $(OBJS_PREF)
+	@rm -f $(addprefix $(OBJDIR)/, $(OBJ))
 
 fclean: clean
 	@echo "FCLEAN"
@@ -66,3 +54,8 @@ re: fclean all
 	@echo "RE"
 
 .PHONY: clean fclean re all
+
+# OLD NAME
+#$(NAME): $(OBJPATH)
+#	@echo "NAME"
+#	@ar rcs $@ $^
